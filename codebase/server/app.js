@@ -4,6 +4,8 @@ dotenv.config();
 const host = process.env.SERVER_HOST;
 const port = process.env.SERVER_PORT;
 const app = express()
+import routes from './routes/index.js';
+app.use(routes);
 
 
 app.get('/', (req, res) => res.send('Hello World!'))
