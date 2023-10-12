@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom';
 import './App.css'
+import './assets/css/bootstrap.css';
 
+import './assets/css/style.css';
+import './assets/css/responsive.css';
+import './assets/css/color.css';
 //pages
 import Home from './markup/pages/Home';
 import About from './markup/pages/About';
@@ -28,13 +32,13 @@ function App() {
      <Routes>
         <Route path='/' element={ <><Home/></>} />
        
-       {/*   
+         
         <Route path='/about' element={<><About /></>} />
         <Route path='/contact' element={<><Contact/></>} />
         <Route path='/services' element={<><Services/></>} />
-        <Route path='/login' element={<><Login /></>} />
+         <Route path='/login' element={<><Login /></>} />
         <Route path='/Fo4' element={ <><Fo4/></>} />
-       */}
+       
       </Routes>
    <Footer /> 
     </>
