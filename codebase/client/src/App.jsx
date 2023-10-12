@@ -9,6 +9,7 @@ import Contact from './markup/pages/Contact';
 import Login from './markup/pages/Login';
 import Services from './markup/pages/Services';
 import Fo4 from './markup/pages/404';
+
 // admin page
 
 
@@ -22,17 +23,20 @@ function App() {
 
   return (
     <>
-      <Routes>
-        <Header />
+      kkk
+      <Header />
+     <Routes>
         <Route path='/' element={ <><Home/></>} />
+       
+       {/*   
         <Route path='/about' element={<><About /></>} />
         <Route path='/contact' element={<><Contact/></>} />
         <Route path='/services' element={<><Services/></>} />
         <Route path='/login' element={<><Login /></>} />
         <Route path='/Fo4' element={ <><Fo4/></>} />
-        <Footer />
+       */}
       </Routes>
-  
+   <Footer /> 
     </>
   )
 }
