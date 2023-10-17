@@ -4,4 +4,15 @@ Hello world
  We need to create ssh key using Edil's email. 
  The server is configured ready to be used by our app.
 
- 
+ touch .env
+
+echo DB_USER=demoapp > .env
+echo DB_PASS=demoapp >> .env
+echo DB_PORT=3306 >> .env
+echo DB_HOST=localhost >> .env
+echo DB_NAME=abegarage >> .env
+echo SERVER_HOST=localhost >> .env
+echo SERVER_PORT=7777 >> .env
+
+type .env
+
