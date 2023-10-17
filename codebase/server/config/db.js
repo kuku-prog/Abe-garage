@@ -30,7 +30,7 @@ async function query(sql, params) {
 //     // Execute a test query to check the connection
 //     const [rows, fields] = await pool.execute('SELECT 1');
 //     console.log('Connected to the database successfully!');
-//     console.log('Connection ID:', pool.threadId);
+//     // console.log('Connection ID:', pool.threadId);
 //   } catch (error) {
 //     console.error('Error connecting to the database:', error);
 //   } finally {

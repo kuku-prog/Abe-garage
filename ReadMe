@@ -1,1 +1,8 @@
 Hello world
+"http://52.37.234.99/phpmyadmin/"  
+ is the phpmyadmin on the server.  
+ user=root, password=kudemo   
+ We need to create ssh key using Edil's email. 
+ The server is configured ready to be used by our app.
+
+ 
