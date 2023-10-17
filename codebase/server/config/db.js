@@ -24,7 +24,7 @@ async function query(sql, params) {
     const [row, fields] = await pool.execute(sql, params);
     return row;
 }
-
+// ssh -i "Demoapp.pem" ubuntu@ec2-52-37-234-99.us-west-2.compute.amazonaws.com
 // async function testConnection() {
 //   try {
 //     // Execute a test query to check the connection
