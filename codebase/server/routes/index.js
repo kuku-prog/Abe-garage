@@ -4,7 +4,7 @@ import installRout from './install.routes.js';
 import employeeRout from './employee.routes.js';
 
      
-routes.use(installRout);
-routes.use(employeeRout);
+indexRoutes .use(installRout);
+indexRoutes .use(employeeRout);
 
-export default routes;
+export default indexRoutes ;
