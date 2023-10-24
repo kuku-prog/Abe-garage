@@ -1,5 +1,5 @@
 import express from 'express';
-const routes = express.Router();
+const indexRoutes = express.Router();
 import installRout from './install.routes.js';
 import employeeRout from './employee.routes.js';
 

@@ -9,10 +9,10 @@ const installService ={
 
   async  install() {
     // Create a variable to hold the path to the sql file  
-  const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(fileURLToPath(import.meta.url));
-  const queryfile = __dirname + '/sql/initial-queries.sql';
-  // console.log(queryfile);
+  const __filename = '/sql/initial-queries.sql';
+  const __dirname = dirname(fileURLToPath(import.meta.url));
+  const queryfile = __dirname + __filename;
+  console.log(queryfile);
   // Temporary variable, used to store all queries, the return message and the current query
   let queries = [];
   let finalMessage = {};
@@ -42,9 +42,13 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
    
   //Loop through the queries and execute them one by one asynchronously  
     for (let i = 0; i < queries.length; i++) {
+
      
     try {
-      const result = await conn.query(queries[i]);    
+      // console.log(conn);
+      // console.log(queries[i]);
+      // const result = await conn.query(queries[i]);    
+      // console.log(result);
       console.log("Table created");
     } catch (err) {
       // console.log("Err Occurred - Table not created");
@@ -52,9 +56,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
     }
   }
   // Prepare the final message to return to the controller 
-  if (!finalMessage.message) {
+  if (!finalMessage.message) {``
     finalMessage.message = "All tables are created";
     finalMessage.status = 200;
+
   } else {
     finalMessage.status = 500;
   }
@@ -66,16 +71,3 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Export the install function for use in the controller
 export default installService;
-
-
-
-
-
-
-
-
-
-
-
-
-

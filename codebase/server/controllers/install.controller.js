@@ -1,7 +1,7 @@
 import installService from '../services/install.service.js';
+
 const installController = {
     async install(req, res, next) { 
-        
     const installmessage = await installService.install();
 
     if (installmessage.status === 200) {
@@ -17,6 +17,7 @@ const installController = {
     }
    
 }
+
 
 };
 
