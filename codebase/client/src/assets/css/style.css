@@ -2370,10 +2370,10 @@ img {
 /* Video Section */
 
 .video-section {
-    position: relative;
+/*     position: relative; */
     padding: 130px 0 120px;
-    background-size: cover;
-    overflow: hidden;
+/*     background-size: cover; */
+/*     overflow: hidden; */
 }
 
 .video-section .sec-bg {
