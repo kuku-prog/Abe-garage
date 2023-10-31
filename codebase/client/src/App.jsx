@@ -1,3 +1,4 @@
+
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom';
 import './App.css'
@@ -27,17 +28,15 @@ function App() {
 
   return (
     <>
-      kkk
+    
       <Header />
      <Routes>
         <Route path='/' element={ <><Home/></>} />
-       
-         
         <Route path='/about' element={<><About /></>} />
         <Route path='/contact' element={<><Contact/></>} />
         <Route path='/services' element={<><Services/></>} />
          <Route path='/login' element={<><Login /></>} />
-        <Route path='/Fo4' element={ <><Fo4/></>} />
+        <Route path='/*' element={ <><Fo4/></>} />
        
       </Routes>
    <Footer /> 

@@ -7,18 +7,14 @@ const password = process.env.DB_PASS;
 const user = process.env.DB_USER;
 const database = process.env.DB_NAME;
 
-const connnection=mysql.createConnection({
-    host,port,password,user, database
+const pool=mysql.createPool({
+    host,port,password,user, database,  connectionLimit: 10,
 });
 
 
-connnection.connect((err)=>{
-    if(err){ console.log(err)}
-    else{
-            console.log("DB is connected "+ connnection.threadId);
-    }
+async function query(sql, params) {
+    const [rows, fields] = await pool.execute(sql, params);
+    return rows;
+  }
 
-}
-);
-
-export default connnection;
+export default query;

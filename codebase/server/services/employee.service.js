@@ -4,7 +4,6 @@ import usersQuery from '../query/user.query.js'
 const employeeService = {
     // Get user by email
     getUserByEmail: (userEmail, callback) => {
-      
         conn.query(usersQuery.getUserByEmailQuery, [userEmail], (error, result, fields) => {
             if (error) {
                 console.log(error);
