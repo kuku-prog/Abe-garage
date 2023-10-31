@@ -4,27 +4,14 @@ import image8 from '../../assets/images/resource/image-8.jpg'
 import vbran1 from "../../assets/images/custom/misc/vban1.jpg";
 import vbran2 from "../../assets/images/custom/misc/vban2.jpg";
 import image4 from '../../assets/images/resource/image-4.jpg'
-import backgroundImage from "../../assets/images/background/bg-1.jpg";
+import backgroundImage from "../../assets/images/background/bg-5.jpg";
+import TopBanner from '../components/TopBanner/TopBanner';
 
 const About = () => {
 
   return (
 		<div>
-			<section
-				className="page-title"
-				style={{ backgroundImage: `url(${BGimg})` }}
-			>
-				<div className="auto-container">
-					<h2>About Us</h2>
-					<ul className="page-breadcrumb">
-						<li>
-							<a href="index.html">home</a>
-						</li>
-						<li>About us</li>
-					</ul>
-				</div>
-				<h1 data-parallax='{"x": 200}'>Car Repairing</h1>
-			</section>
+		 <TopBanner title='About us' subtitle='home' bgImage={backgroundImage}/>
 
 			<section className="about-section-three">
 				<div className="auto-container">
