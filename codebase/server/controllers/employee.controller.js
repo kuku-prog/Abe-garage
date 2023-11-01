@@ -3,8 +3,9 @@ import bcrypt from "bcrypt";
 
 const employeeController = {
     addemployee(req, res, next) {
+      
         const { employee_email, employee_first_name, employee_last_name, employee_phone, active_employee, employee_password } = req.body;
-        // check all fields are sent
+           // check all fields are sent
         if (!employee_email || !employee_first_name || !employee_last_name || !employee_phone || !employee_password || !active_employee) {
             return res.status(500).json({
                 success: "false",

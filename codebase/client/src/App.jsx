@@ -16,7 +16,7 @@ import Services from './markup/pages/Services';
 import Fo4 from './markup/pages/404';
 
 // admin page
-
+import AddEmployee  from "./markup/pages/admin/AddEmployee/AddEmployee"
 
 
 //componnents
@@ -35,7 +35,10 @@ function App() {
         <Route path='/about' element={<><About /></>} />
         <Route path='/contact' element={<><Contact/></>} />
         <Route path='/services' element={<><Services/></>} />
-         <Route path='/login' element={<><Login /></>} />
+        <Route path='/login' element={<><Login /></>} />
+
+        <Route path='/admin/add-employee' element={ <><AddEmployee /></>} />
+
         <Route path='/*' element={ <><Fo4/></>} />
        
       </Routes>
