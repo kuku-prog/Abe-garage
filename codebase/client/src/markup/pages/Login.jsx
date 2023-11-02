@@ -52,32 +52,64 @@ const Login = () => {
 
 
 	return (
-		<div  class="d-flex justify-content-center align-items-center">
-			  <div className="form-column col-lg-7 text-center">
-                    <div className="inner-column">
-						<h3 className="align-items-start">Login to your account </h3>
-                        <div className="contact-form">
-                            <form method="post" onSubmit={handleSubmit} id="contact-form">
-                                <div className="row clearfix">
-								
-                                    <div className="form-group col-md-8">
-                                        <input type="email" name="employee_email" placeholder="Your Email"  required  onChange={(e) => setUserEmail(e.target.value)} />
-                                    </div>
-									{error && (error =="Invalid email address") && <span>{error}</span>}
-                                    
-                                    <div className="form-group col-md-8">
-                                        <input type="password" name="employee_password" placeholder="Your password"  required onChange={(e)=>setUserPassword(e.target.value)} />
-                                    </div>
-									{error && (error == "Invalid password. Password must be at least 8 characters long and contain at least one letter and one number.")  && <span>{error}</span>}
-                                    <div className="form-group col-md-8">
-                                        <input id="form_botcheck" name="form_botcheck" className="form-control" type="hidden" value="" />
-                                        <button className="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><span>Login</span></button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+		<div class="d-flex justify-content-center align-items-center">
+			<div className="form-column col-lg-7">
+				<div className="inner-column">
+					<div className="d-flex">
+						<h3 className=" font-weight-bold">Login to your account </h3>
+						<h3 className="text-danger ml-2">___</h3>
+					</div><br/>
+					<div className="contact-form ">
+						<form method="post" onSubmit={handleSubmit} id="contact-form">
+							<div className="row clearfix ">
+								<div className="form-group col-md-8">
+									<input
+										type="email"
+										name="employee_email"
+										placeholder="Your Email"
+										required
+										onChange={(e) => setUserEmail(e.target.value)}
+									/>
+								</div>
+								{error && error == "Invalid email address" && (
+									<span>{error}</span>
+								)}
+
+								<div className="form-group col-md-8">
+									<input
+										type="password"
+										name="employee_password"
+										placeholder="Your password"
+										required
+										onChange={(e) => setUserPassword(e.target.value)}
+									/>
+								</div>
+								{error &&
+									error ==
+										"Invalid password. Password must be at least 8 characters long and contain at least one letter and one number." && (
+										<span>{error}</span>
+									)}
+								<div className="form-group col-md-8">
+									<input
+										id="form_botcheck"
+										name="form_botcheck"
+										className="form-control"
+										type="hidden"
+										value=""
+									/>
+									<button
+										className="theme-btn btn-style-one"
+										type="submit"
+										data-loading-text="Please wait..."
+									>
+										<span>Login</span>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 };
