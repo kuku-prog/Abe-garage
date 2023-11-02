@@ -22,29 +22,78 @@ import AddEmployee  from "./markup/pages/admin/AddEmployee/AddEmployee"
 //componnents
 import Header from './markup/components/Header/Header';
 import Footer from './markup/components/Footer/Footer';
+import Admin from './markup/components/Admin/Admin';
 
 function App() {
 
 
   return (
-    <>
-    
-      <Header />
-     <Routes>
-        <Route path='/' element={ <><Home/></>} />
-        <Route path='/about' element={<><About /></>} />
-        <Route path='/contact' element={<><Contact/></>} />
-        <Route path='/services' element={<><Services/></>} />
-        <Route path='/login' element={<><Login /></>} />
+		<>
+			<Header />
+			<Routes>
+				<Route
+					path="/"
+					element={
+						<>
+							<Home />
+						</>
+					}
+				/>
+				<Route
+					path="/about"
+					element={
+						<>
+							<About />
+						</>
+					}
+				/>
+				<Route
+					path="/contact"
+					element={
+						<>
+							<Contact />
+						</>
+					}
+				/>
+				<Route
+					path="/services"
+					element={
+						<>
+							<Services />
+						</>
+					}
+				/>
+				<Route
+					path="/login"
+					element={
+						<>
+							<Login />
+						</>
+					}
+				/>
 
-        <Route path='/admin/add-employee' element={ <><AddEmployee /></>} />
+				<Route
+					path="/admin/add-employee"
+					element={
+						<>
+							<AddEmployee />
+						</>
+					}
+				/>
+				<Route path="/admin" element={<Admin />} />
 
-        <Route path='/*' element={ <><Fo4/></>} />
-       
-      </Routes>
-   <Footer /> 
-    </>
-  )
+				<Route
+					path="/*"
+					element={
+						<>
+							<Fo4 />
+						</>
+					}
+				/>
+			</Routes>
+			<Footer />
+		</>
+	);
 }
 
 export default App
