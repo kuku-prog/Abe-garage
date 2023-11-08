@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom';
 import './App.css'
@@ -16,13 +15,12 @@ import Services from './markup/pages/Services';
 import Fo4 from './markup/pages/404';
 
 // admin page
-import AddEmployee  from "./markup/pages/admin/AddEmployee/AddEmployee"
+import AddEmployeePage  from "./markup/pages/admin/AddEmployeePage"
 
 
 //componnents
 import Header from './markup/components/Header/Header';
 import Footer from './markup/components/Footer/Footer';
-import Admin from './markup/components/Admin/Admin';
 
 function App() {
 
@@ -76,12 +74,10 @@ function App() {
 					path="/admin/add-employee"
 					element={
 						<>
-							<AddEmployee />
+							<AddEmployeePage />
 						</>
 					}
 				/>
-				<Route path="/admin" element={<Admin />} />
-
 				<Route
 					path="/*"
 					element={

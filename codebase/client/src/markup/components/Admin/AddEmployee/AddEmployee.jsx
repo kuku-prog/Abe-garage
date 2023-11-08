@@ -2,50 +2,50 @@ import React, { useState } from "react";
 import "./addEmployee.css";
 import validateForm from "../../../../util/validation";
 import axios from "../../../../util/axios";
-import Admin from "../../../components/Admin/Admin";
+
 const AddEmployee = () => {
 	const [form, setForm] = useState({});
 	const [errors, setErrors] = useState({});
 
 	const hadleSubmit = async (e) => {
-		e.preventDefault();
-		const isvalid = validateForm(form);
+		// asynchronous function that handles form submission.
+		e.preventDefault(); //prevents the default form submission behavior using
+		const isvalid = validateForm(form); // to check if the form inputs are valid and stores the result in the isvalid variable.
 		console.log(isvalid);
 		if (!isvalid.isValid) {
 			console.log(isvalid.errors);
 		} else {
 			try {
 				form.active_employee = 1;
-				const responce = await axios.post("/api/employee", form);
-				if (responce.data.success) {
+				const responce = await axios.post("/api/employee", form); //it proceeds to make an HTTP POST request using axios to the "/api/employee" endpoint.
+				if (responce.data.success) { //displays an alert with the success message, and reloads the page.
 					e.target.value = "";
 					alert(responce.data.message);
 					window.location.reload();
 				}
 			} catch (error3) {
-				alert(error3.response.data.message);
+				alert(error3.response.data.message); //If there is an error in the HTTP request, it displays an alert with the error message.
 			}
 		}
 	};
 
 	return (
-		<div>
-			<Admin />
+		<>
 			<div className="form-column col-lg-7">
 				<div className="inner-column">
 					<div className="contact-form">
 						<form onSubmit={hadleSubmit} id="contact-form">
 							<div className="row clearfix">
 								<div className="form-group col-md-12">
-									<input
+									<input //Each input field is associated with an onChange event handler, which updates the form state with the new input value when the user types into the field.
 										type="email"
 										name="employee_email"
 										placeholder="Employee Email"
 										required
-										onChange={(e) => {
+										onChange={(e) => { //  'e' is a parameter of the event handler function
 											setForm({
 												...form,
-												employee_email: e.target.value,
+												employee_email: e.target.value, // 'e.target.value' retrieves the current value of the input field that triggered the event.
 											});
 										}}
 									/>
@@ -124,7 +124,7 @@ const AddEmployee = () => {
 									/>
 								</div>
 								<div className="form-group col-md-12">
-									<input
+									<input //??
 										id="form_botcheck"
 										name="form_botcheck"
 										className="form-control"
@@ -143,7 +143,7 @@ const AddEmployee = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 
