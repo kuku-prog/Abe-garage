@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from "react";
-
+// import VisibilityIcon from '@mui/icons-material/Visibility';
+// import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 const Login = () => {
 	const [userEmail,setUserEmail] = useState("");
 	const [userPassword,setUserPassword] = useState("");
@@ -25,7 +26,7 @@ const Login = () => {
 	function validateEmailAndPassword(email, password) {
 		// Regular expression patterns for email and password validation
 		var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-		var passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+		var passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_]).{8,}$/;
 		
 		// Validate email
 		if (!emailPattern.test(email)) {
