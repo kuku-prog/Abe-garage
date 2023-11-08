@@ -1,40 +1,39 @@
-import React from 'react'
-import './admin.css'
+import React from "react";
+import "./admin.css";
 import { Link, Route, Routes } from "react-router-dom";
 
-
 function Admin() {
-  return (
-		<div className="bg-container" >
-			<div className="admin-container" >
+	return (
+		<div className="bg-container">
+			<div className="admin-container">
 				<h4>
 					<Link to="/admin">ADMIN MENU</Link>
 				</h4>
 				<div className="list-container">
 					<ul className="admin-list">
 						<li>
-							<Link href="/dashboard">Dashbord</Link>
+							<Link to="/">Dashbord</Link>
 						</li>
 						<li>
-							<Link href="/orders">Orders</Link>
+							<Link to="/orders">Orders</Link>
 						</li>
 						<li>
-							<Link href="/new-order">New order</Link>
+							<Link to="/new-order">New order</Link>
 						</li>
 						<li>
 							<Link to="/admin/add-employee">Add employee</Link>
 						</li>
 						<li>
-							<Link href="/employee">Employee</Link>
+							<Link to="/employee">Employee</Link>
 						</li>
 						<li>
-							<Link href="/add-customer">Add customer</Link>
+							<Link to="/add-customer">Add customer</Link>
 						</li>
 						<li>
-							<Link href="/customers">Customers</Link>
+							<Link to="/customers">Customers</Link>
 						</li>
 						<li>
-							<Link href="/servies">Servies</Link>
+							<Link to="/servies">Servies</Link>
 						</li>
 					</ul>
 				</div>
@@ -43,4 +42,4 @@ function Admin() {
 	);
 }
 
-export default Admin
+export default Admin;
