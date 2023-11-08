@@ -80,7 +80,7 @@ const AddEmployee = () => {
 									<input
 										type="text"
 										name="employee_phone"
-										placeholder="Employee phone"
+										placeholder="Employee_phone"
 										required
 										onChange={(e) => {
 											setForm({
