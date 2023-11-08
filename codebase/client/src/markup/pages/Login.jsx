@@ -25,7 +25,7 @@ const Login = () => {
 	function validateEmailAndPassword(email, password) {
 		// Regular expression patterns for email and password validation
 		var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-		var passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+		var passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_]).{8,}$/;
 		
 		// Validate email
 		if (!emailPattern.test(email)) {
