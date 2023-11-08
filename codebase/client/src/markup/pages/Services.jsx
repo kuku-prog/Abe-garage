@@ -5,7 +5,7 @@ import TopBanner from "../components/TopBanner/TopBanner";
 const Services = () => {
 	return (
 		<div>
-			<TopBanner title="Services" subtitle="home" bgImage={backgroundImage} />
+			<TopBanner title="Services" subtitle="Home" bgImage={backgroundImage} />
 			<section className="services-section style-three">
 				<div className="auto-container">
 					<div className="sec-title style-two">
