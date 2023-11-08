@@ -7,7 +7,7 @@ function Admin() {
 		<div className="bg-container">
 			<div className="admin-container">
 				<h4>
-					<Link to="/admin">ADMIN MENU</Link>
+					<a href="/admin">ADMIN MENU</a>
 				</h4>
 				<div className="list-container">
 					<ul className="admin-list">
