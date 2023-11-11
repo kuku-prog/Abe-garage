@@ -11,7 +11,7 @@ const About = () => {
 
   return ( 
 		<div>
-		 <TopBanner title='About us' subtitle='home' bgImage={backgroundImage}/>
+			<TopBanner title="About us" subtitle="home" bgImage={backgroundImage} />
 
 			<section className="about-section-three">
 				<div className="auto-container">
@@ -167,11 +167,11 @@ const About = () => {
 				</div>
 			</section>
 			<section className="video-section">
-				<div
+				{/* <div
 					data-parallax='{"y": 50}'
 					className="sec-bg"
 					style={{ backgroundImage: `url(${backgroundImage})` }}
-				></div>
+				></div> */}
 				<div className="auto-container">
 					<h5>Working since 1992</h5>
 					<h2>
@@ -215,6 +215,6 @@ const About = () => {
 			</section>
 		</div>
 	);
-}
+};
 
-export default About
+export default About;
