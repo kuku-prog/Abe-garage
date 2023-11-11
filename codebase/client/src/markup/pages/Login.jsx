@@ -30,7 +30,6 @@ const Login = () => {
 		var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 		var passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
-
 		// Validate email
 		if (!emailPattern.test(email)) {
 			return {
@@ -76,7 +75,10 @@ const Login = () => {
 									<span>{error}</span>
 								)}
 
-								<div className="form-group col-md-8">
+								<div
+									className="form-group col-md-8"
+									style={{ display: "flex", alignItems: "center" }}
+								>
 									<input
 										type={showpassword ? "password" : "text"}
 										name="employee_password"
