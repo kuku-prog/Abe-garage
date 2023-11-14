@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./addEmployee.css";
+// import "./addEmployee.css";
 import validateForm from "../../../../util/validation";
 import axios from "../../../../util/axios";
 const AddEmployee = () => {

@@ -21,6 +21,7 @@ import AddCustomer from "./markup/pages/admin/addCustomer/AddCustomer";
 //componnents
 import Header from "./markup/components/Header/Header";
 import Footer from "./markup/components/Footer/Footer";
+import AddEmployeePage from "./markup/pages/admin/AddEmployeePage";
 
 function App() {
 	return (
@@ -72,7 +73,7 @@ function App() {
 					path="/admin/add-employee"
 					element={
 						<>
-							<AddEmployee />
+							<AddEmployeePage />
 						</>
 					}
 				/>
