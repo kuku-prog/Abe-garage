@@ -1,11 +1,29 @@
 import { useState, useEffect } from "react";
-
+import formvali from "../../../../util/validation";
+import axios from "../../../../util/axios";
 import "./AddCustomer.css";
 function AddCustomer() {
 	const [form, setForm] = useState({});
 	const [errors, setErrors] = useState({});
+
 	const hadleSubmit = async (e) => {
 		e.preventDefault();
+		const isvalid = formvali.validateForm2(form);
+		console.log(isvalid);
+		if (!isvalid.isValid) {
+			console.log(isvalid.errors);
+		} else {
+			try {
+				const responce = await axios.post("/api/add-customer", form);
+				if (responce.data.success) {
+					e.target.value = "";
+					alert(responce.data.message);
+					window.location.reload();
+				}
+			} catch (error3) {
+				alert(error3.response.data.message);
+			}
+		}
 	};
 
 	return (
