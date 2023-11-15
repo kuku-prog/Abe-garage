@@ -15,6 +15,33 @@ const Home = () => {
                     <div className="layer layer-three"><span className="overlay"></span></div>
             </div> */}
 
+				<div
+					class="swiper-slide"
+					// style="background-image: url(assets/images/main-slider/image-2.jpg);"
+				>
+					<div class="content-outer">
+						<div className="content-box">
+							<div className="inner">
+								<h1>
+									Highly Skilled <br /> Cretified Engineers
+								</h1>
+								<div className="text">
+									We believe in providing top quality workmanship and are <br />
+									so confident in our level of service that we back it up <br />{" "}
+									with a good quality.
+								</div>
+								<div className="link-box">
+									<a href="service-1.html" className="theme-btn btn-style-one">
+										<span>
+											view all services <i className="flaticon-right"></i>
+										</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<section className="video-section">
 					<div
 						data-parallax='{"y": 50}'
