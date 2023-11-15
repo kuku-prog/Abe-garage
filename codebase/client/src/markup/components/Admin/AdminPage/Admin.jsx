@@ -27,7 +27,7 @@ function Admin() {
 							<Link to="/employee">Employee</Link>
 						</li>
 						<li>
-							<Link to="/add-customer">Add customer</Link>
+							<Link to="/admin/add-customer">Add customer</Link>
 						</li>
 						<li>
 							<Link to="/customers">Customers</Link>
