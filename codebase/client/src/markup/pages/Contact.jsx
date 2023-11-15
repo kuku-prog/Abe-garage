@@ -8,7 +8,7 @@ const Contact = () => {
        <section className="contact-section">
         <div className="auto-container">
             <div className="contact-title">
-                <h2>Drop us message</h2>
+                <h2>Drop us message</h2> 
                 <div className="text">Praising pain was born and I will give you a complete account of the system, and </div>
             </div>
             <div className="row clearfix">
