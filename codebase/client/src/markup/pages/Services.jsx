@@ -5,7 +5,7 @@ import TopBanner from "../components/TopBanner/TopBanner";
 const Services = () => {
 	return (
 		<div>
-			<TopBanner title="Services" subtitle="home" bgImage={backgroundImage} />
+			<TopBanner title="Services" subtitle="Home" bgImage={backgroundImage} />
 			<section className="services-section style-three">
 				<div className="auto-container">
 					<div className="sec-title style-two">
@@ -118,11 +118,12 @@ const Services = () => {
 				</div>
 			</section>
 			<section className="video-section">
-				{/* <div
+				<div
 					data-parallax='{"y": 50}'
 					className="sec-bg"
-					style="background-image: url(assets/images/background/bg-1.jpg);"
-				></div> */}
+					// style="background-image: url(assets/images/background/bg-1.jpg);"
+					// <div data-parallax="{&quot;y&quot;: 50}" class="sec-bg" style="transform:translate3d(0px, 50px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(0px, 50px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); background-image: url(assets/images/background/bg-1.jpg);"></div>
+				></div>
 				<div className="auto-container">
 					<h5>Working since 1992</h5>
 					<h2>
