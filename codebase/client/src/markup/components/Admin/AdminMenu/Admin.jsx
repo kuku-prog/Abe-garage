@@ -12,7 +12,7 @@ function Admin() {
 				<div className="list-container">
 					<ul className="admin-list">
 						<li>
-							<Link to="/">Dashbord</Link>
+							<Link to="/admin/dashbord">Dashbord</Link>
 						</li>
 						<li>
 							<Link to="/orders">Orders</Link>
