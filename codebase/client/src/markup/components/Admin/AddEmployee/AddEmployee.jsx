@@ -3,7 +3,7 @@ import "./addEmployee.css";
 import validateForm from "../../../../util/validation";
 import axios from "../../../../util/axios";
 
-const AddEmployee = () => {
+const AddEmployee = () => { 
 	const [form, setForm] = useState({});
 	const [errors, setErrors] = useState({});
 

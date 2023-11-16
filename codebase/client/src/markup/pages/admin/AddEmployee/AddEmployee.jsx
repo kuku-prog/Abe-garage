@@ -12,7 +12,7 @@ const AddEmployee = () => {
 		console.log(isvalid);
 		if (!isvalid.isValid) {
 			console.log(isvalid.errors);
-		} else {
+		} else { 
 			try {
 				form.active_employee = 1;
 				const responce = await axios.post("/api/employee", form);

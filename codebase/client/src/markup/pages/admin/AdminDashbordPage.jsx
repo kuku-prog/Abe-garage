@@ -1,8 +1,9 @@
+
 import React from "react";
 import Admin from "../../components/Admin/AdminMenu/Admin";
-import AddEmployee from "../../components/Admin/AddEmployee/AddEmployee";
+import AdminDashbord from "./adminDashbord/AdminDashbord";
 
-function AddEmployeePage() {
+function AdminDashbordPage() {
 	return (
 		<>
 			<div className="container-fluid admin-page">
@@ -11,7 +12,7 @@ function AddEmployeePage() {
 						<Admin />
 					</div>
 					<div className=" col-md-9 admin-right-side">
-						<AddEmployee />
+						<AdminDashbord />
 					</div>
 				</div>
 			</div>
@@ -19,4 +20,4 @@ function AddEmployeePage() {
 	);
 }
 
-export default AddEmployeePage;
+export default AdminDashbordPage;
