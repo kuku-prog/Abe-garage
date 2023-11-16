@@ -22,6 +22,7 @@ import AddCustomer from "./markup/pages/admin/addCustomer/AddCustomer";
 import Header from "./markup/components/Header/Header";
 import Footer from "./markup/components/Footer/Footer";
 import AddEmployeePage from "./markup/pages/admin/AddEmployeePage";
+import AddCustomerPage from "./markup/pages/admin/addCustomer/AddCustomerPage";
 
 function App() {
 	return (
@@ -77,6 +78,16 @@ function App() {
 						</>
 					}
 				/>
+
+				<Route
+					path="/admin/add-customer"
+					element={
+						<>
+							<AddCustomerPage />
+						</>
+					}
+				/>
+
 				<Route
 					path="/admin/add-customer"
 					element={
