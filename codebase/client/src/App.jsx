@@ -79,6 +79,16 @@ function App() {
 						</>
 					}
 				/>
+
+				<Route
+					path="/admin/add-customer"
+					element={
+						<>
+							<AddCustomerPage />
+						</>
+					}
+				/>
+
 				<Route
 					path="/admin/add-customer"
 					element={
