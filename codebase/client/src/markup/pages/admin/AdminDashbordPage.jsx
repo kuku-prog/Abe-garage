@@ -8,10 +8,10 @@ function AdminDashbordPage() {
 		<>
 			<div className="container-fluid admin-page">
 				<div className="row">
-					<div className="col-md-3 admin-left-side">
+					<div className="col-md-3 admin-left-side ">
 						<Admin />
 					</div>
-					<div className=" col-md-9 admin-right-side">
+					<div className=" col-md-9 admin-right-side custom-background">
 						<AdminDashbord />
 					</div>
 				</div>

@@ -30,10 +30,14 @@ const AddEmployee = () => {
 	};
 
 	return (
-		<>
+		<> 
 			<div className="form-column col-lg-7">
 				<div className="inner-column">
-					<div className="contact-form">
+					<div className="contact-form sec-title style-two">
+						<br /><br />
+						<h2>Add a new employee</h2>
+						<br />
+						<br /><br />
 						<form onSubmit={hadleSubmit} id="contact-form">
 							<div className="row clearfix">
 								<div className="form-group col-md-12">
@@ -42,7 +46,8 @@ const AddEmployee = () => {
 										name="employee_email"
 										placeholder="Employee Email"
 										required
-										onChange={(e) => { //  'e' is a parameter of the event handler function
+										onChange={(e) => {
+											//  'e' is a parameter of the event handler function
 											setForm({
 												...form,
 												employee_email: e.target.value, // 'e.target.value' retrieves the current value of the input field that triggered the event.

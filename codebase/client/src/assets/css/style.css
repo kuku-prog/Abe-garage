@@ -6187,11 +6187,7 @@ img {
     margin-bottom: 40px;
 }
 
-@media only screen and (min-width: 992px) {
-    .blog-post-column {
-        padding-right: 45px;
-    }
-}
+/******************************************************************************CUSTOM CSS STARTS HERE******************************************************************/
 
 /* Custom */
 .cta-section {
@@ -6199,9 +6195,65 @@ img {
     padding: 75px 0px 70px;
 }
 
+/* Admin section  */
+.bg-container {
+   display: flex;
+  height: 100%;
+}
+.admin-container {
+  height: 100%;
+  width: 100%; 
+  background-color: #222B48;
+  display: flex;
+  flex-direction: column;
+}
+.list-container {
+  flex: 1;
+  overflow-y: auto; 
+}
+li a{
+      color: white;
+      text-decoration: none;
+      padding-left: 15px;
+      
+}
+.admin-list li {
+  border-bottom: 1px solid white;
+  padding: 10px 0;
+  margin: 0;
+}
+h4{
+    height: 55px;
+    /* width: 25%; */
+    background-color: #1E2331;
+    color: lightgray;
+  padding: 10px;
 
+  margin: 0;
+}
+.custom-background {
+  background-color: #F5F4F7;
+}
+.admin-single .inner-box h2{
+    position:relative;
+    font-size:20px;
+    font-weight:700;
+    line-height:1.2em;
+    margin-bottom:15px;
+}
+/* .dashbord-title h2 {
+    position: relative;
+    font-size: 35px;
+    font-weight: 700;
+    color: #06175b;
+    padding-bottom: 15px;
+} */
 
-
+@media only screen and (min-width: 992px) {
+    .blog-post-column {
+        padding-right: 45px;
+    }
+}
 
 
 
