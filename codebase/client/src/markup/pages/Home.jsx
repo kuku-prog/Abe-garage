@@ -2,58 +2,29 @@ import React from "react";
 //images
 import vban1 from "../../assets/images/custom/misc/vban1.jpg";
 import vban2 from "../../assets/images/custom/misc/vban2.jpg";
+import bgImage from "../../assets/images/custom/banner/banner1.jpg"
+import image3 from "../../assets/images/resource/image-3.jpg"
+import image4 from "../../assets/images/resource/image-4.jpg"
+import bgImage2 from "../../assets/images/background/bg-1.jpg"
+
 const Home = () => {
 	return (
 		<div>
 			<div className="page-wrapper">
-				{/* <div className="loader-wrap">
-                    <div className="preloader">
-                        <div className="preloader-close">Preloader Close</div>
-                    </div>
-                    <div className="layer layer-one"><span className="overlay"></span></div>
-                    <div className="layer layer-two"><span className="overlay"></span></div>
-                    <div className="layer layer-three"><span className="overlay"></span></div>
-            </div> */}
-
-				<div
-					class="swiper-slide"
-					// style="background-image: url(assets/images/main-slider/image-2.jpg);"
-				>
-					<div class="content-outer">
-						<div className="content-box">
-							<div className="inner">
-								<h1>
-									Highly Skilled <br /> Cretified Engineers
-								</h1>
-								<div className="text">
-									We believe in providing top quality workmanship and are <br />
-									so confident in our level of service that we back it up <br />{" "}
-									with a good quality.
-								</div>
-								<div className="link-box">
-									<a href="service-1.html" className="theme-btn btn-style-one">
-										<span>
-											view all services <i className="flaticon-right"></i>
-										</span>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<section className="video-section">
+				<section className="video-section swiper-slide">
 					<div
 						data-parallax='{"y": 50}'
 						className="sec-bg"
 						style={{
-							backgroundImage:
-								"url(../../assets/images/custom/banner/banner1.jpg)",
+							backgroundImage: `url(${bgImage})`,
 						}}
 					></div>
 					<div className="auto-container">
 						<h5>Working since 1999</h5>
-						<h2>Tuneup Your Car to Next Level</h2>
+						<h2>
+							Tuneup Your Car <br />
+							to Next Level
+						</h2>
 						<div className="video-box">
 							<div className="video-btn">
 								<a
@@ -65,7 +36,7 @@ const Home = () => {
 							</div>
 							<div className="text">
 								Watch intro video
-								<b /> about us
+								<br /> about us
 							</div>
 						</div>
 					</div>
@@ -229,7 +200,7 @@ const Home = () => {
 							</div>
 							<div className="col-lg-6">
 								<div className="image">
-									<img src="assets/images/resource/image-3.jpg" alt="" />
+									<img src={image3} alt="" />
 								</div>
 							</div>
 						</div>
@@ -281,7 +252,7 @@ const Home = () => {
 								<div className="row">
 									<div className="col-md-5">
 										<div className="image">
-											<img src="assets/images/resource/image-4.jpg" alt="" />
+											<img src={image4} alt="" />
 										</div>
 									</div>
 									<div className="col-md-7">
@@ -311,12 +282,12 @@ const Home = () => {
 						data-parallax='{"y": 50}'
 						className="sec-bg"
 						style={{
-							backgroundImage: "url(../../assets/images/background/bg-1.jpg)",
+							backgroundImage: `url(${bgImage2})`,
 						}}
 					></div>
 					<div className="auto-container">
 						<h5>Working since 1992</h5>
-						<h2>We are leader in Car Mechanical Work</h2>
+						<h2>We are leader <br/> in Car Mechanical Work</h2>
 						<div className="video-box">
 							<div className="video-btn">
 								<a
@@ -326,7 +297,7 @@ const Home = () => {
 									<i className="flaticon-play"></i>
 								</a>
 							</div>
-							<div className="text">Watch intro video about us</div>
+							<div className="text">Watch intro video <br/> about us</div>
 						</div>
 					</div>
 				</section>
