@@ -4,7 +4,7 @@ import image8 from '../../assets/images/resource/image8.jpg'
 import vbran1 from "../../assets/images/custom/misc/vban1.jpg";
 import vbran2 from "../../assets/images/custom/misc/vban2.jpg";
 import image4 from '../../assets/images/resource/image4.jpg'
-import backgroundImage from "../../assets/images/background/bg-2.jpg";
+import backgroundImage from "../../assets/images/background/bg2.png";
 import TopBanner from '../components/TopBanner/TopBanner';
 
 const About = () => {
