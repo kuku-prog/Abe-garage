@@ -4,7 +4,7 @@ import vban1 from "../../assets/images/custom/misc/vban1.jpg";
 import vban2 from "../../assets/images/custom/misc/vban2.jpg";
 import bgImage from "../../assets/images/custom/banner/banner1.jpg"
 import image3 from "../../assets/images/resource/image-3.jpg"
-import image4 from "../../assets/images/resource/image-4.jpg"
+import image4 from "../../assets/images/resource/image4.jpg"
 import bgImage2 from "../../assets/images/background/bg-1.jpg"
 
 const Home = () => {

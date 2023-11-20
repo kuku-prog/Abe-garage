@@ -1,9 +1,9 @@
 import React from 'react'
 // import BGimg from "../../assets/images/background/bg-3.png";
-import image8 from '../../assets/images/resource/image-8.jpg'
+import image8 from '../../assets/images/resource/image8.jpg'
 import vbran1 from "../../assets/images/custom/misc/vban1.jpg";
 import vbran2 from "../../assets/images/custom/misc/vban2.jpg";
-import image4 from '../../assets/images/resource/image-4.jpg'
+import image4 from '../../assets/images/resource/image4.jpg'
 import backgroundImage from "../../assets/images/background/bg-2.jpg";
 import TopBanner from '../components/TopBanner/TopBanner';
 
@@ -167,11 +167,11 @@ const About = () => {
 				</div>
 			</section>
 			<section className="video-section">
-				{/* <div
+				<div
 					data-parallax='{"y": 50}'
 					className="sec-bg"
 					style={{ backgroundImage: `url(${backgroundImage})` }}
-				></div> */}
+				></div>
 				<div className="auto-container">
 					<h5>Working since 1992</h5>
 					<h2>
