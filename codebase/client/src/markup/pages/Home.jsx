@@ -3,9 +3,9 @@ import React from "react";
 import vban1 from "../../assets/images/custom/misc/vban1.jpg";
 import vban2 from "../../assets/images/custom/misc/vban2.jpg";
 import bgImage from "../../assets/images/custom/banner/banner1.jpg"
-import image3 from "../../assets/images/resource/image-3.jpg"
-import image4 from "../../assets/images/resource/image4.jpg"
-import bgImage2 from "../../assets/images/background/bg-1.jpg"
+import image3 from "../../assets/images/resource/image33.jpg"
+import image4 from "../../assets/images/resource/image-4 (2).jpg"
+import bgImage2 from "../../assets/images/background/bg2.png"
 
 const Home = () => {
 	return (
@@ -198,7 +198,7 @@ const Home = () => {
 									</div>
 								</div>
 							</div>
-							<div className="col-lg-6">
+							<div className="col-lg-6 autoImage">
 								<div className="image">
 									<img src={image3} alt="" />
 								</div>
@@ -245,7 +245,7 @@ const Home = () => {
 									<h4>Awarded Workshop</h4>
 								</div>
 							</div>
-							<div className="col-lg-6">
+							<div className="col-lg-6 sec-conainer">
 								<div className="sec-title style-two">
 									<h2>Addtional Services</h2>
 								</div>
@@ -287,7 +287,9 @@ const Home = () => {
 					></div>
 					<div className="auto-container">
 						<h5>Working since 1992</h5>
-						<h2>We are leader <br/> in Car Mechanical Work</h2>
+						<h2>
+							We are leader <br /> in Car Mechanical Work
+						</h2>
 						<div className="video-box">
 							<div className="video-btn">
 								<a
@@ -297,7 +299,9 @@ const Home = () => {
 									<i className="flaticon-play"></i>
 								</a>
 							</div>
-							<div className="text">Watch intro video <br/> about us</div>
+							<div className="text">
+								Watch intro video <br /> about us
+							</div>
 						</div>
 					</div>
 				</section>

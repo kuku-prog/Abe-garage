@@ -2384,7 +2384,6 @@ img {
     right: 0;
     background-size: cover;
 }
-
 .video-section h5 {
     position: relative;
     color: #fff;
@@ -6195,7 +6194,7 @@ img {
     padding: 75px 0px 70px;
 }
 
-/* Admin section  */
+/* ******Admin section*******  */
 .bg-container {
    display: flex;
   height: 100%;
@@ -6248,6 +6247,22 @@ h4{
     color: #06175b;
     padding-bottom: 15px;
 } */
+
+/* ******Homepage****** */
+.autoImage{
+    margin-top: 100px;
+}
+.autoImage img {
+    height: 420px;
+}
+.sec-conainer .image img {
+    height: 440px;
+}
+.why-choose-us .auto-container .icon-box h4 {
+    background-color: white;
+}
+
+
 
 @media only screen and (min-width: 992px) {
     .blog-post-column {
