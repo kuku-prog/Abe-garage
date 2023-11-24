@@ -1222,7 +1222,6 @@ img {
     transition: top 300ms ease;
 }
 
-
 .sticky-header .main-menu .navigation {
     margin-left: 0;
 }
@@ -6262,6 +6261,12 @@ h4{
     background-color: white;
 }
 
+.sticky-header {
+    background-color: pink;
+
+}
+
+/* ******HomePage****** */
 
 
 @media only screen and (min-width: 992px) {
