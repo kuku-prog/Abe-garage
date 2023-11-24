@@ -4,7 +4,7 @@ const customerRoute = express.Router();
 customerRoute.post("/api/add-customer", customerController.addcustomer);
 // customerRoute.get('/all-customer', customerController.allcustomer);
 // customerRoute.get('/single-customer', customerController.singlecustomer);
-// customerRoute.update('/update-single-customer', customerController.updatesinglecustomer);
+customerRoute.update('/update-single-customer', customerController.updatesinglecustomer);
 // customerRoute.delete('/delete-single-customer', customerController.deletesinglecustomer);
 
 export default customerRoute;
