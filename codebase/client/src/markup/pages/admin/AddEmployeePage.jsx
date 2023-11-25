@@ -10,7 +10,7 @@ function AddEmployeePage() {
 					<div className="col-md-3 admin-left-side">
 						<Admin />
 					</div>
-					<div className=" col-md-9 admin-right-side">
+					<div className=" col-md-9 admin-right-side bg-light">
 						<AddEmployee />
 					</div>
 				</div>
