@@ -6,10 +6,7 @@ export default {
    addcustomer_infoTableQuery: `INSERT INTO customer_info (customer_id, customer_first_name, customer_last_name, active_customer_status)
    VALUES (?, ?, ?, ?);
    `,
-   updateCustomer_infoTableQuery: `INSERT INTO customer_info ( customer_phone_number,
-            customer_first_name,
-            customer_last_name,
-            active_customer_status
-        WHERE customer_id) VALUES (?, ?, ?, ?, ? ): `
-           
+updateCustomer_infoTableQuery: ` UPDATE customer_info SET customer_first_name = ?, customer_last_name = ?, active_customer_status = ?
+    WHERE customer_id = ?;
+    `,
 }

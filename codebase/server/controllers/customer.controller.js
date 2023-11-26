@@ -89,12 +89,11 @@ const  customerController ={
 
 	  updatesinglecustomer: async (req, res, next) => {
     const {
-      customer_id,
-      customer_phone_number,
-      customer_first_name,
-      customer_last_name,
-      active_customer_status,
-    } = req.body;
+		customer_id,
+		customer_first_name,
+		customer_last_name,
+		active_customer_status,
+		} = req.body;
 
     // check if customer_id is provided
     if (!customer_id) {
@@ -107,7 +106,6 @@ const  customerController ={
     // prepare updated data
     const updatedData = {
       customer_id,
-      customer_phone_number,
       customer_first_name,
       customer_last_name,
       active_customer_status,

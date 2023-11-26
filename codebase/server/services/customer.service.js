@@ -48,23 +48,23 @@ const customerService = {
         },
 
     updatesinglecustomer: (data, callback) => {
-        conn.query(customerQuery.updateCustomer_infoTableQuery,
-        [
-            data.customer_phone_number,
-            data.customer_first_name,
-            data.customer_last_name,
-            data.active_customer_status,
-            data.customer_id,
-        ],
-        (error, result, fields) => {
-            if (error) {
-            console.log(error);
-            return callback(error);
-            } else {
-            return callback(null, result);
-            }
-        }
-        );
+        conn.query(
+					customerQuery.updateCustomer_infoTableQuery,
+					[
+						data.customer_first_name,
+						data.customer_last_name,
+						data.active_customer_status,
+						data.customer_id,
+					],
+					(error, result, fields) => {
+						if (error) {
+							console.log(error);
+							return callback(error);
+						} else {
+							return callback(null, result);
+						}
+					}
+				);
     },
 };
 
