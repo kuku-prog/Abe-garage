@@ -1,5 +1,5 @@
 import conn from "../config/db.js";
-import customerQuery from '../query/customer.query.js'
+import customerQuery from "../query/customer.query.js";
 
 const customerService = {
 	getCustomerByEmail: (customerEmail, callback) => {
@@ -52,6 +52,12 @@ const customerService = {
 		);
 	},
 
+	allcustomer: (callback) => {
+		conn.query(
+			customerQuery.allCustomers_data,
+
+
+
 	updatesinglecustomer: (data, callback) => {
 		conn.query(
 			customerQuery.updateCustomer_infoTableQuery,
@@ -89,6 +95,7 @@ const customerService = {
 		conn.query(
 			customerQuery.selectCustomerByid,
 			[data],
+
 			(error, result, fields) => {
 				if (error) {
 					console.log(error);
@@ -101,5 +108,4 @@ const customerService = {
 	},
 };
 
-
-export default  customerService;
+export default customerService;

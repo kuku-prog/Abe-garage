@@ -74,6 +74,24 @@ const customerController = {
 		});
 	},
 
+	allcustomer: async (req, res, next) => {
+		await customerService.allcustomer((err, results) => {
+			if (err) {
+				console.log(err);
+				return res.status(500).json({
+					success: "false",
+					message: "Database connection error during email checking",
+				});
+			} else {
+				return res.status(200).json({
+					success: "true",
+					data: results,
+				});
+			}
+		});
+	},
+
+
 	updatesinglecustomer: async (req, res, next) => {
 		const customer_id = req.params.id.substring(1);
 		console.log(customer_id);
@@ -154,6 +172,7 @@ const customerController = {
 	},
 
 	// prepare updated data
+
 };
 
 export default customerController;
