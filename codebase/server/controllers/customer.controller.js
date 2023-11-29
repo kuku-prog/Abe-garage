@@ -73,6 +73,7 @@ const customerController = {
 			}
 		});
 	},
+
 	allcustomer: async (req, res, next) => {
 		await customerService.allcustomer((err, results) => {
 			if (err) {
@@ -89,6 +90,89 @@ const customerController = {
 			}
 		});
 	},
+
+
+	updatesinglecustomer: async (req, res, next) => {
+		const customer_id = req.params.id.substring(1);
+		console.log(customer_id);
+		const {
+			customer_first_name,
+			customer_last_name,
+			customer_phone,
+			active_customer_status,
+		} = req.body;
+		console.log(req.body);
+		// check if customer_id is provided
+		if (
+			!customer_id ||
+			!customer_first_name ||
+			!customer_last_name ||
+			!customer_phone ||
+			!active_customer_status
+		) {
+			return res.status(400).json({
+				success: false,
+				message: "All fields are required for the update.",
+			});
+		}
+		customerService.checkCustomerById(customer_id, (err, results) => {
+			if (err) {
+				return res.status(500).json({
+					success: false,
+					message: "Database connection error during customer update.",
+				});
+			} else {
+				if (!results.length) {
+					return res.status(400).json({
+						success: false,
+						message: "Customer does not exist with this id",
+					});
+				} else {
+					const updatedData = {
+						customer_id,
+						customer_first_name,
+						customer_last_name,
+						active_customer_status,
+					};
+
+					// update customer info
+					customerService.updatesinglecustomer(updatedData, (err, results) => {
+						if (err) {
+							return res.status(500).json({
+								success: false,
+								message: "Database connection error during customer update.",
+							});
+						} else {
+							const updatePhone = {
+								phone_number: customer_phone,
+								customer_id: customer_id,
+							};
+							customerService.updateCustomerPhone(
+								updatePhone,
+								(err, results) => {
+									if (err) {
+										return res.status(500).json({
+											success: false,
+											message:
+												"Database connection error during customer update.",
+										});
+									} else {
+										return res.status(200).json({
+											success: true,
+											message: "Customer updated successfully.",
+										});
+									}
+								}
+							);
+						}
+					});
+				}
+			}
+		});
+	},
+
+	// prepare updated data
+
 };
 
 export default customerController;

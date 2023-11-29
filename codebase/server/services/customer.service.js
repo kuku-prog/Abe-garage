@@ -51,9 +51,50 @@ const customerService = {
 			}
 		);
 	},
+
 	allcustomer: (callback) => {
 		conn.query(
 			customerQuery.allCustomers_data,
+
+
+
+	updatesinglecustomer: (data, callback) => {
+		conn.query(
+			customerQuery.updateCustomer_infoTableQuery,
+			[
+				data.customer_first_name,
+				data.customer_last_name,
+				data.active_customer_status,
+				data.customer_id,
+			],
+			(error, result, fields) => {
+				if (error) {
+					console.log(error);
+					return callback(error);
+				} else {
+					return callback(null, result);
+				}
+			}
+		);
+	},
+	updateCustomerPhone: (data, callback) => {
+		conn.query(
+			customerQuery.updateCustomer_phoneQuery,
+			[data.phone_number, data.customer_id],
+			(error, result, fields) => {
+				if (error) {
+					console.log(error);
+					return callback(error);
+				} else {
+					return callback(null, result);
+				}
+			}
+		);
+	},
+	checkCustomerById: (data, callback) => {
+		conn.query(
+			customerQuery.selectCustomerByid,
+			[data],
 
 			(error, result, fields) => {
 				if (error) {
