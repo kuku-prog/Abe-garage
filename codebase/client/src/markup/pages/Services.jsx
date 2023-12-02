@@ -1,6 +1,7 @@
 import React from "react";
-import backgroundImage from "../../assets/images/background/bg-5.jpg";
+import backgroundImage from "../../assets/images/custom/random/modern-car-service3.png";
 import TopBanner from "../components/TopBanner/TopBanner";
+import bgImage3 from "../../assets/images/custom/random/car-engin3.png";
 
 const Services = () => {
 	return (
@@ -121,9 +122,16 @@ const Services = () => {
 				<div
 					data-parallax='{"y": 50}'
 					className="sec-bg"
-					// style="background-image: url(assets/images/background/bg-1.jpg);"
-					// <div data-parallax="{&quot;y&quot;: 50}" class="sec-bg" style="transform:translate3d(0px, 50px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(0px, 50px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); background-image: url(assets/images/background/bg-1.jpg);"></div>
+					style={{
+						backgroundImage: `url(${bgImage3})`,
+					}}
 				></div>
+				{/* <div
+				// data-parallax='{"y": 50}'
+				// className="sec-bg"
+				// style="background-image: url(assets/images/custom/random/modern-car-service3.png);"
+				// <div data-parallax="{&quot;y&quot;: 50}" class="sec-bg" style="transform:translate3d(0px, 50px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(0px, 50px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); background-image: url(assets/images/background/bg-1.jpg);"></div>
+				></div> */}
 				<div className="auto-container">
 					<h5>Working since 1992</h5>
 					<h2>
@@ -140,6 +148,27 @@ const Services = () => {
 						</div>
 						<div className="text">
 							Watch intro video <br /> about us
+						</div>
+					</div>
+				</div>
+			</section>
+			<section className="cta-section">
+				<div className="auto-container">
+					<div className="wrapper-box">
+						<div className="left-column">
+							<h3>Schedule Your Appointment Today</h3>
+							<div className="text">
+								Your Automotive Repair & Maintenance Service Specialist
+							</div>
+						</div>
+						<div className="right-column">
+							<div className="phone">1800.456.7890</div>
+							<div className="btn">
+								<a href="#" className="theme-btn btn-style-one">
+									<span>Appointment</span>
+									<i className="flaticon-right"></i>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
