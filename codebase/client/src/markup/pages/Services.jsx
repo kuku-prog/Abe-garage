@@ -1,5 +1,5 @@
 import React from "react";
-import backgroundImage from "../../assets/images/background/bg-5.jpg";
+import backgroundImage from "../../assets/images/custom/random/carservice3.jpg";
 import TopBanner from "../components/TopBanner/TopBanner";
 
 const Services = () => {
