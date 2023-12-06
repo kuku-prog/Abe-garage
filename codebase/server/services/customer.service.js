@@ -52,9 +52,9 @@ const customerService = {
 		);
 	},
 
-	allcustomer: (callback) => {
-		conn.query(
-			customerQuery.allCustomers_data,
+	// allcustomer: (callback) => {
+	// 	conn.query(
+	// 		customerQuery.allCustomers_data,
 
 
 
