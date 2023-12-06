@@ -7,29 +7,35 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+function createData(Active, firstname, lastName, Email, Phone,AddedDate,Role,edit) {
+  return { Active, firstname, lastName, Email, Phone ,AddedDate,Role,edit};
 }
 
-const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
 
-export default function AdminTable() {
+export default function AdminTable(props) {
+
+
+  console.log(props.post);
+
+  const rows = props.post.map((single) => {
+    return createData(single.active_employee, single.firstname, single.lastname, single.email, single.phone,single.added_date,single.company_role_name)
+
+  });
+
+  
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            <TableCell>Active</TableCell>
+            <TableCell align="right">firstname</TableCell>
+            <TableCell align="right">lastName</TableCell>
+            <TableCell align="right">Email</TableCell>
+            <TableCell align="right">Phone</TableCell>
+            <TableCell align="right">Added date</TableCell>
+            <TableCell align="right">Role</TableCell>
+            <TableCell align="right">edit / delete</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -39,12 +45,15 @@ export default function AdminTable() {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.name}
+                {row.Active}
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              <TableCell align="right">{row.firstname}</TableCell>
+              <TableCell align="right">{row.lastName}</TableCell>
+              <TableCell align="right">{row.Email}</TableCell>
+              <TableCell align="right">{row.Phone}</TableCell>
+              <TableCell align="right">{row.AddedDate}</TableCell>
+              <TableCell align="right">{row.Role}</TableCell>
+              <TableCell align="right">{row.edit}</TableCell>
             </TableRow>
           ))}
         </TableBody>
