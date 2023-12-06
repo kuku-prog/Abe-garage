@@ -19,3 +19,7 @@ type .env
 ssh -i "Demoapp.pem" ubuntu@ec2-52-37-234-99.us-west-2.compute.amazonaws.com
 
 
+
+app.js => index.js =>each routes.js=>each controllers.js => each services.js queries getting from the sql queries!    
+
+

@@ -53,10 +53,8 @@ const customerService = {
 	},
 
 	allcustomer: (callback) => {
-		conn.query(
-			customerQuery.allCustomers_data,
-
-
+		conn.query(customerQuery.allCustomers_data);
+	},
 
 	updatesinglecustomer: (data, callback) => {
 		conn.query(

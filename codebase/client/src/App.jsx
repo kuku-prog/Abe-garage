@@ -17,14 +17,14 @@ import Fo4 from "./markup/pages/404";
 // admin page
 import AddEmployee from "./markup/pages/admin/AddEmployee/AddEmployee";
 import AddCustomer from "./markup/pages/admin/addCustomer/AddCustomer";
-
+import AddVehicle from "./markup/pages/admin/AddVehicle/AddVehicle";
 //componnents
 import Header from "./markup/components/Header/Header";
 import Footer from "./markup/components/Footer/Footer";
 import AddEmployeePage from "./markup/pages/admin/AddEmployeePage";
 import AddCustomerPage from "./markup/pages/admin/AddCustomerPage";
 import AdminDashbordPage from "./markup/pages/admin/AdminDashbordPage";
-
+import AddVehiclePage from "./markup/pages/admin/AddVehiclePage";
 function App() {
 	return (
 		<>
@@ -90,10 +90,10 @@ function App() {
 				/>
 
 				<Route
-					path="/admin/add-customer"
+					path="/admin/vehicle"
 					element={
 						<>
-							<AddCustomerPage />
+							<AddVehiclePage />
 						</>
 					}
 				/>
